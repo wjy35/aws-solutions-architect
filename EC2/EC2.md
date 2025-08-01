@@ -235,3 +235,34 @@ AWS의 남는 자원을 경매하야 Instance를 유지하는 방식
 - Spot Block을 통해 일정 시간동안 Spot Instance를 차단하여 중단없이 실행 가능(1 ~ 6 hours)
     - 드물게 회수되는 경우도 있음
 - 고려중인 AZ에 따라서 요금이 다름
+
+
+# EC2 User Data
+
+부트스트래핑을 지원하는 EC2 script
+- Instance의 first start에서 한번만 실행됨
+- automate boot tasks such as
+    - update
+    - install software
+    - common file download
+    - etc.
+- sript로 실행하는 작업아 많을수록 boot 속도는 느려짐
+- Root user에서 실행됨
+
+# EC2 Hibernate
+
+EC2의 RAM에 In-Memory state를 유지한채로 stop 하는 방식
+- stop / terminate → restart 보다 boot 속도 빠름
+- In-Memory state는 root EBS에 dump
+    - root EBS only
+    - EBS volume enrypted
+    - EBS 용량이 충분해야함
+- Supported Instance Family에서만 이용 가능하지만 많음
+- 최대 RAM은 150GB
+- bare metal Instance는 사용 불가
+- 많은 AMI / OS 에서 이옹 가능
+    - Linux
+    - Window
+    - etc.
+- Reserved Instance / Saving Plan / Spot Instance와 사용 가능
+- 최대 60일까지 유지 됨
