@@ -236,6 +236,9 @@ AWS의 남는 자원을 경매하야 Instance를 유지하는 방식
     - 드물게 회수되는 경우도 있음
 - 고려중인 AZ에 따라서 요금이 다름
 
+<br/>
+<br/>
+<br/>
 
 # EC2 User Data
 
@@ -248,6 +251,10 @@ AWS의 남는 자원을 경매하야 Instance를 유지하는 방식
     - etc.
 - sript로 실행하는 작업아 많을수록 boot 속도는 느려짐
 - Root user에서 실행됨
+
+<br/>
+<br/>
+<br/>
 
 # EC2 Hibernate
 
