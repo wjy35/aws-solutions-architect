@@ -2,6 +2,7 @@
 
 네트워크에서 machine 을 식별하기위한 고유 장치
 
+&Image - IP
 <br/>
 
 **Public IP**
