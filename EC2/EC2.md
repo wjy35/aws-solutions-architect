@@ -237,6 +237,10 @@ AWS의 남는 자원을 경매하야 Instance를 유지하는 방식
 - 고려중인 AZ에 따라서 요금이 다름
 
 &Image - spot instance lifecycle
+&Spot Inastande Link
+
+
+
 <br/>
 <br/>
 <br/>
