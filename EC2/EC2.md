@@ -30,7 +30,7 @@ https://aws.amazon.com/ec2/instance-types/
 
 **Instance Types Naming Convention**
 
-&이미지Naming Convention
+&Image - Naming Convention
 
 <br/>
 
@@ -115,7 +115,7 @@ EC2의 inbound, outbound traffic을 제어하는 외부 firewall 역할
     - Allow all outbound
     - Not Allow all inbound
 
-&Security Group Image
+&Image - Security Group
 
 <br/>
 <br/>
@@ -236,6 +236,7 @@ AWS의 남는 자원을 경매하야 Instance를 유지하는 방식
     - 드물게 회수되는 경우도 있음
 - 고려중인 AZ에 따라서 요금이 다름
 
+&Image - spot instance lifecycle
 <br/>
 <br/>
 <br/>
