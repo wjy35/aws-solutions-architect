@@ -218,10 +218,10 @@ Instance의 실제 물리적인 전용 서버를 제공 받음
 
 **Purchasing Options - Spot Instances**
 
-AWS의 남는 자원을 경매하야 Instance를 유지하는 방식
+AWS의 남는 자원을 경매해서 Instance를 유지하는 방식
 
 - 가장 저렴함
-- 지불하려는 최대 가격을 정의하고 넘을 경우 손실 됨
+- 지불하려는 Max Price 지정 후 넘을 경우 손실 됨
 - resilient to failure workload에 적합
     - Batch
     - Data Analysis
@@ -235,7 +235,7 @@ AWS의 남는 자원을 경매하야 Instance를 유지하는 방식
 - Spot Block을 통해 일정 시간동안 Spot Instance를 차단하여 중단없이 실행 가능(1 ~ 6 hours)
     - 드물게 회수되는 경우도 있음
 - 고려중인 AZ에 따라서 요금이 다름
-
+- Spot Instance Request를 삭제한다고해서 실행된 EC2가 종료되는 것은 아님(Only Delete Request)
 &Image - spot instance lifecycle
 &Spot Inastande Link
 
