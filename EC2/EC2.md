@@ -272,7 +272,7 @@ EC2의 RAM에 In-Memory state를 유지한채로 stop 하는 방식
 - Supported Instance Family에서만 이용 가능하지만 많음
 - 최대 RAM은 150GB
 - bare metal Instance는 사용 불가
-- 많은 AMI / OS 에서 이옹 가능
+- 많은 AMI / OS 에서 이용 가능
     - Linux
     - Window
     - etc.
