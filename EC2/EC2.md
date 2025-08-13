@@ -239,7 +239,25 @@ AWS의 남는 자원을 경매해서 Instance를 유지하는 방식
 &Image - spot instance lifecycle
 &Spot Inastande Link
 
+<br>
 
+**Spot Fleets**
+
+set of Spot Instances + (Optional) On-Demand Instances
+
+- 정의한 가격 제한으로 목표 용량 달성을 시도
+- Spot Instance에 원하는 Instance 유형과 AZ를 정확히 모를때 사용하기 좋음
+- 가능한 Launch Pool 에서 시작함
+    - Instance Type
+    - OS
+    - AZ
+- Launch Pool 내에 가장 적합한 Pool을 Fleet이 자동 선택
+- 목표 Capacity or Max price에 도달시 Stop Instance
+- Spot Instance Strategy를 할당해야함
+    - lowestPrice : 최저 가격 launch pool에서 시작함(short workload 적합)
+    - diversified : 모든 launch pool에서 분산 실행됨(HA, long workload 적합)
+    - capacityOptimized : 원하는 Instance 수에 맞는 최적의 용량을 가진 pool 선택
+    - priceCapacityOptimized : available highest capacity pool 선택 후 그 중 가장 lowest price 선택 (Recommended)
 
 <br/>
 <br/>
@@ -254,7 +272,7 @@ AWS의 남는 자원을 경매해서 Instance를 유지하는 방식
     - install software
     - common file download
     - etc.
-- sript로 실행하는 작업아 많을수록 boot 속도는 느려짐
+- sript로 실행하는 작업이 많을수록 boot 속도는 느려짐
 - Root user에서 실행됨
 
 <br/>
@@ -278,3 +296,55 @@ EC2의 RAM에 In-Memory state를 유지한채로 stop 하는 방식
     - etc.
 - Reserved Instance / Saving Plan / Spot Instance와 사용 가능
 - 최대 60일까지 유지 됨
+
+<br>
+<br>
+<br>
+
+# **EC2 Placements Groups**
+**Cluster**
+
+하나의 AZ에 Instance를 배치
+
+- Great Network 를 가짐(10 Gbps bandwidth beetwen Instances)
+- AZ fail 시 모든 Instance fail
+- Use Cases
+    - 빠른 Big Data 연산
+    - Low latency + High network throuput Application
+
+&Image - Cluster
+
+<br>
+
+**Spread(분산)**
+
+EC2 Instance를 서로 다른 Hardware(Rack)에 배치
+
+- 서로 다른 AZ에도 배치 가능
+- 동시 실패의 위험을 감소 시킴
+- AZ 실패시 최대 가용성
+- 최대 7 Instance per AZ
+- Use Cases
+    - maximum High Availability Application
+    - Instance 오류를 서로 격리해야하는 Critical Application
+
+&Image - Spread
+
+<br>
+
+**Partition(분할)**
+
+Instance를 여러 Partition에 나누어 배치
+
+- 하나의 Partition은 하나의 Rack
+- 최대 7개 Partition per AZ
+- 최대 수백개의 Instance 까지 배치 가능
+- EC2 Instance는 Partition Information을 Metadata Service로 알 수 있음
+- Partition 인식이 가능한 Application에 유리
+- Use Case
+    - HDFS
+    - Hbase
+    - Cassandra
+    - Kafka
+
+&Image - Partition
