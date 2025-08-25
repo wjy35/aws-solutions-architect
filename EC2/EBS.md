@@ -173,6 +173,7 @@ sc1 (Cold HDD)
     - Clustered Linux Application 고가용성 향상 (ex : TeraData)
     - concurrent write operation을 관리해야할 때
 - Cluster-Aware File System을 사용해야함
+&Image - MultiAttach
 
 <br>
 <br>
@@ -220,6 +221,7 @@ EC2에 mount되눈 managed Network File System
     - web serving
     - data sharing
     - Wordpress
+&Image - EFS
 
 ### EFS Scale
 
