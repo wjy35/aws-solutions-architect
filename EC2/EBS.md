@@ -201,6 +201,10 @@ unencrypted EBS volume 을 encrypt하는 방법
 3. encrypt snapshot으로 ebs volume 생성 (encrypt volume)
 4. ebs volume을 instance에 attach
 
+<br>
+<br>
+<br>
+
 # EFS
 
 EC2에 mount되눈 managed Network File System
