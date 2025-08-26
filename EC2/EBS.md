@@ -49,7 +49,7 @@ Instance 실행 중 attach 가능한 network drive
 
 EC2로 만든 Machine Image
 
-- software, configuration, OS, monitoring
+- software, configuration, OS, monitoring 등을 customizing
 - software를 pre-package 해서 Fast Boot 가능
 - 특정 Region에서 Build
 - 다른 Region으로 Copy하여 이동 가능 (AWS Global Infra 활용)
