@@ -3,7 +3,7 @@
 Instance 실행 중 attach 가능한 network drive
 
 - Instance가 Terminate 되어도 Persist Data
-- binding AZ (Snapshot 을 통해 AZ 이동 가능)
+- binding AZ (Snapshot Copy를 통해 AZ 이동 가능)
 - Multi Attach (EC2 하나에 여러 EBS)
 - network drive로 latency 가능성이 존재
 - EC2로부터 quickly detach 가능
@@ -52,7 +52,7 @@ EC2로 만든 Machine Image
 - software, configuration, OS, monitoring
 - software를 pre-package 해서 Fast Boot 가능
 - 특정 Region에서 Build
-- 다른 Region으로 이동 가능 (AWS Global Infra 활용)
+- 다른 Region으로 Copy하여 이동 가능 (AWS Global Infra 활용)
 - EC2를 실행 가능한 방법
     - public AMI : AWS Provided (ex: Linux)
     - own AMI : 자체제작 및 유지보수 AMI
